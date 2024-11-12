@@ -1,7 +1,10 @@
+// src/App.tsx
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Countdown from "./components/Countdown";
 import "./assets/background.css";
 import { useState } from "react";
-import TypingText from "./components/TypingTextEffect";
+import BirthdayMessage from "./components/BirthdayMessage";
+import LoveLetterPage from "./components/LoveLetterPage"; // Import halaman LoveLetterPage
 
 function App() {
   const [isCountdownComplete, setIsCountdownComplete] = useState(false);
@@ -10,36 +13,44 @@ function App() {
     setIsCountdownComplete(true);
   };
 
-  // const targetDate = '2024-11-14T00:00:00';
-  const targetDate = new Date(Date.now() + 5000).toISOString();
+  const targetDate = new Date(Date.now() + 3000).toISOString();
 
   return (
-    <div className="max-h-screen">
-      {/* <audio src="/music.mp3" autoPlay loop /> */}
+    <BrowserRouter>
+      <div className="max-h-screen">
+        <div id="stars"></div>
+        <div id="stars2"></div>
+        <div id="stars3"></div>
 
-      <div id="stars"></div>
-      <div id="stars2"></div>
-      <div id="stars3"></div>
-
-      <div className="flex flex-col items-center justify-center h-screen text-white px-4 text-center">
-        {!isCountdownComplete ? (
-          <>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 drop-shadow-lg">
-              Maaf kak kayanya website ini belum jadi 😅
-            </h1>
-            <p className="text-sm sm:text-base md:text-lg lg:text-xl mt-4 mb-6 opacity-90 max-w-md">
-              Sambil nunggu aku harap kamu cover music ini sihh🤪
-            </p>
-            <Countdown
-              targetDate={targetDate}
-              onComplete={handleCountdownComplete}
+        <div className="flex flex-col items-center justify-center h-screen text-white px-4 text-center">
+          <Routes>
+            <Route
+              path="/"
+              element={
+                !isCountdownComplete ? (
+                  <>
+                    <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 drop-shadow-lg">
+                      CIEEE MAU 21....😅
+                    </h1>
+                    <p className="text-sm sm:text-base md:text-lg lg:text-xl mt-4 mb-6 opacity-90 max-w-[60rem]">
+                      Ini special gift buat kamu, tapi maaf yahh kalo masi
+                      banyak kurangnya, aku dadakan buatnya...😅
+                    </p>
+                    <Countdown
+                      targetDate={targetDate}
+                      onComplete={handleCountdownComplete}
+                    />
+                  </>
+                ) : (
+                  <BirthdayMessage />
+                )
+              }
             />
-          </>
-        ) : (
-          <TypingText text="Happy Birthday Nandutttttt❤️" />
-        )}
+            <Route path="/my-wish" element={<LoveLetterPage />} />
+          </Routes>
+        </div>
       </div>
-    </div>
+    </BrowserRouter>
   );
 }
 

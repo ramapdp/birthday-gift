@@ -21,7 +21,7 @@ code {
 }
 
 .pulse-text {
-  animation: pulse 2s infinite;
+  animation: pulse 10s infinite ease-in-out;
 }
 
 @keyframes pulse {

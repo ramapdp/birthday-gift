@@ -1,4 +1,3 @@
-// src/components/TypingText.tsx
 import React from "react";
 import ReactTypingEffect from "react-typing-effect";
 import { motion } from "framer-motion";

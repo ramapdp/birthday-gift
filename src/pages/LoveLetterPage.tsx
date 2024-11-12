@@ -1,4 +1,3 @@
-// src/pages/LoveLetterPage.tsx
 import React from "react";
 import { motion } from "framer-motion";
 import TypingText from "../components/TypingTextEffect"; // Pastikan TypingTextEffect sudah ada

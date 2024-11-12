@@ -1,10 +1,12 @@
-// src/App.tsx
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Countdown from "./components/Countdown";
 import "./assets/background.css";
 import { useState } from "react";
-import BirthdayMessage from "./components/BirthdayMessage";
-import LoveLetterPage from "./components/LoveLetterPage"; // Import halaman LoveLetterPage
+import BirthdayMessage from "./pages/BirthdayMessage";
+import LoveLetterPage from "./pages/LoveLetterPage"; // Import halaman LoveLetterPage
+import GiftPage from "./pages/GiftPage";
+import SurprisePage from "./pages/SurprisePage";
+import MemoriesPage from "./pages/MemoriesPage";
 
 function App() {
   const [isCountdownComplete, setIsCountdownComplete] = useState(false);
@@ -18,6 +20,8 @@ function App() {
   return (
     <BrowserRouter>
       <div className="max-h-screen">
+        <audio src="/music.mp3" autoPlay loop />
+
         <div id="stars"></div>
         <div id="stars2"></div>
         <div id="stars3"></div>
@@ -47,6 +51,9 @@ function App() {
               }
             />
             <Route path="/my-wish" element={<LoveLetterPage />} />
+            <Route path="/gift" element={<GiftPage />} />
+            <Route path="/surprise" element={<SurprisePage />} />
+            <Route path="/my-galleries" element={<MemoriesPage />} />
           </Routes>
         </div>
       </div>

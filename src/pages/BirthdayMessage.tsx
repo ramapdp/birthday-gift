@@ -1,6 +1,5 @@
-// src/components/BirthdayMessage.tsx
 import React from "react";
-import TypingText from "./TypingTextEffect";
+import TypingText from "../components/TypingTextEffect";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { useSwipeable } from "react-swipeable";
@@ -8,7 +7,6 @@ import { useSwipeable } from "react-swipeable";
 const BirthdayMessage: React.FC = () => {
   const navigate = useNavigate();
 
-  // Handler swipe up to navigate
   const handlers = useSwipeable({
     onSwipedUp: () => navigate("/my-wish"),
     preventScrollOnSwipe: true,

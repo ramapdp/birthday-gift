@@ -7,6 +7,7 @@ import LoveLetterPage from "./pages/LoveLetterPage"; // Import halaman LoveLette
 import GiftPage from "./pages/GiftPage";
 import SurprisePage from "./pages/SurprisePage";
 import MemoriesPage from "./pages/MemoriesPage";
+import Music from "./assets/music.mp3"
 
 function App() {
   const [isCountdownComplete, setIsCountdownComplete] = useState(false);
@@ -16,12 +17,12 @@ function App() {
   };
 
   // const targetDate = "2024-11-14T00:00:00";
-  const targetDate = new Date(Date.now() + 800000).toISOString();
+  const targetDate = new Date(Date.now() + 80000).toISOString();
 
   return (
     <HashRouter>
       <div className="max-h-screen">
-        <audio src="/music.mp3" autoPlay loop />
+        <audio src={Music} autoPlay loop />
 
         <div id="stars"></div>
         <div id="stars2"></div>

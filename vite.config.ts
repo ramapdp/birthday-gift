@@ -5,7 +5,7 @@ import { configDefaults } from "vitest/config";
 
 const config: UserConfigExport = defineConfig({
   plugins: [react()],
-  base: "/special-gift/",
+  base: "/birthday-gift/",
   test: {
     globals: true,
     environment: "jsdom",

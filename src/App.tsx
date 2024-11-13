@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import Countdown from "./components/Countdown";
 import "./assets/background.css";
 import { useState } from "react";
@@ -19,7 +19,7 @@ function App() {
   // const targetDate = new Date(Date.now() + 3000).toISOString();
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <div className="max-h-screen">
         <audio src="/music.mp3" autoPlay loop />
 
@@ -58,7 +58,7 @@ function App() {
           </Routes>
         </div>
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 

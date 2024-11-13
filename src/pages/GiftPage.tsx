@@ -1,4 +1,3 @@
-// src/pages/GiftPage.tsx
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
@@ -35,7 +34,7 @@ const GiftPage: React.FC = () => {
           initial={{ scale: 0.8, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 0.8 }}
-          className="text-center"
+          className="flex flex-col items-center justify-center h-full"
         >
           <motion.h2
             initial={{ scale: 0.8, opacity: 0 }}
@@ -50,7 +49,7 @@ const GiftPage: React.FC = () => {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1, duration: 1 }}
-            className="text-lg font-medium text-pink-600 max-w-md mt-20"
+            className="text-lg font-medium text-center text-pink-600 max-w-md mt-4"
           >
             Ini hadiah kecil dari aku...
           </motion.p>

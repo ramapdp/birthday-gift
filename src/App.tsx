@@ -16,8 +16,8 @@ function App() {
     setIsCountdownComplete(true);
   };
 
-  // const targetDate = "2024-11-14T00:00:00";
-  const targetDate = new Date(Date.now() + 80000).toISOString();
+  const targetDate = "2024-11-14T00:00:00";
+  // const targetDate = new Date(Date.now() + 3000).toISOString();
 
   return (
     <HashRouter>

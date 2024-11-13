@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import TypingText from "../components/TypingTextEffect"; // Pastikan TypingTextEffect sudah ada
+import TypingText from "../components/TypingTextEffect";
 import { useNavigate } from "react-router-dom";
 
 const LoveLetterPage: React.FC = () => {
@@ -19,7 +19,7 @@ const LoveLetterPage: React.FC = () => {
 
       <TypingText
         text="Aku berharap diusia kamu yang makin bertambah ini, kamu makin dewasa, makin baik, diperlancar skripsiannya, makin sayang sama aku, makin sabar, makin rajin, makin pinter, makin sehat, makin makin deh pokoknya... Semoga apa yang kamu inginkan, apa yang kamu cita-citakan, apa yang kamu impikan, segera tercapai. Aamiin. Happy Birthday, ndutt! 🎉"
-        className="text-lg font-normal text-gray-400 max-w-lg"
+        className="text-base sm:text-lg md:text-xl lg:text-2xl font-normal text-gray-400 max-w-lg"
       />
 
       <motion.button
